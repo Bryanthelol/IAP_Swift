@@ -20,15 +20,15 @@ keychain 的特点就是：
 ## 组成部分
 
 * 订单存储模块
-        * 订单Model
-                * 实现encode协议，可以data化
-                * 实现isEqual方法，比较对象细节
-        * 存储工具，基于keychain
-        * 订单Model归档成NSData
-        * 多个Data组成一个set
-        * 再将这个set归档
-        * 把归档后的set保存在字典中，key为userid
-        * 再把字典归档，保存在keychain中
+  * 订单Model
+    * 实现encode协议，可以data化
+    * 实现isEqual方法，比较对象细节
+  * 存储工具，基于keychain
+  * 订单Model归档成NSData
+  * 多个Data组成一个set
+  * 再将这个set归档
+  * 把归档后的set保存在字典中，key为userid
+  * 再把字典归档，保存在keychain中
 * 验证队列模块
         * 5个入口：
             1. app初始化
