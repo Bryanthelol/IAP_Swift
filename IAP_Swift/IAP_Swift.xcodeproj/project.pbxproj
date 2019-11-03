@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		181654C5236ED96400B91E54 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181654C4236ED96400B91E54 /* StoreKit.framework */; };
 		181654D0236EE0AE00B91E54 /* TransactionKeyChainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181654CF236EE0AE00B91E54 /* TransactionKeyChainStore.swift */; };
 		181654D1236EE0AE00B91E54 /* TransactionKeyChainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181654CF236EE0AE00B91E54 /* TransactionKeyChainStore.swift */; };
+		18165556236EE62C00B91E54 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 18165555236EE62C00B91E54 /* KeychainAccess */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18165556236EE62C00B91E54 /* KeychainAccess in Frameworks */,
 				181654C5236ED96400B91E54 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +163,9 @@
 			dependencies = (
 			);
 			name = IAP_Swift;
+			packageProductDependencies = (
+				18165555236EE62C00B91E54 /* KeychainAccess */,
+			);
 			productName = IAP_Swift;
 			productReference = 1816549C236ED3A800B91E54 /* IAP_Swift.app */;
 			productType = "com.apple.product-type.application";
@@ -211,6 +216,9 @@
 				Base,
 			);
 			mainGroup = 18165493236ED3A800B91E54;
+			packageReferences = (
+				18165554236EE62C00B91E54 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 1816549D236ED3A800B91E54 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -515,6 +523,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18165554236EE62C00B91E54 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18165555236EE62C00B91E54 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18165554236EE62C00B91E54 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18165494236ED3A800B91E54 /* Project object */;
 }
