@@ -15,6 +15,8 @@
 		181654AC236ED3AC00B91E54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181654AA236ED3AC00B91E54 /* LaunchScreen.storyboard */; };
 		181654B7236ED3AC00B91E54 /* IAP_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181654B6236ED3AC00B91E54 /* IAP_SwiftTests.swift */; };
 		181654C5236ED96400B91E54 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181654C4236ED96400B91E54 /* StoreKit.framework */; };
+		181654D0236EE0AE00B91E54 /* TransactionKeyChainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181654CF236EE0AE00B91E54 /* TransactionKeyChainStore.swift */; };
+		181654D1236EE0AE00B91E54 /* TransactionKeyChainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181654CF236EE0AE00B91E54 /* TransactionKeyChainStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,19 @@
 			remoteInfo = IAP_Swift;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		18165553236EE46100B91E54 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1816549C236ED3A800B91E54 /* IAP_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IAP_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +55,7 @@
 		181654B6236ED3AC00B91E54 /* IAP_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAP_SwiftTests.swift; sourceTree = "<group>"; };
 		181654B8236ED3AC00B91E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181654C4236ED96400B91E54 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		181654CF236EE0AE00B91E54 /* TransactionKeyChainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionKeyChainStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +99,7 @@
 		1816549E236ED3A800B91E54 /* IAP_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				181654C7236EDFB700B91E54 /* In-AppPurchase */,
 				1816549F236ED3A800B91E54 /* AppDelegate.swift */,
 				181654A1236ED3A800B91E54 /* SceneDelegate.swift */,
 				181654A3236ED3A800B91E54 /* ViewController.swift */,
@@ -111,6 +128,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		181654C7236EDFB700B91E54 /* In-AppPurchase */ = {
+			isa = PBXGroup;
+			children = (
+				181654C8236EE03200B91E54 /* TransactionPersistence */,
+			);
+			path = "In-AppPurchase";
+			sourceTree = "<group>";
+		};
+		181654C8236EE03200B91E54 /* TransactionPersistence */ = {
+			isa = PBXGroup;
+			children = (
+				181654CF236EE0AE00B91E54 /* TransactionKeyChainStore.swift */,
+			);
+			path = TransactionPersistence;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,6 +154,7 @@
 				18165498236ED3A800B91E54 /* Sources */,
 				18165499236ED3A800B91E54 /* Frameworks */,
 				1816549A236ED3A800B91E54 /* Resources */,
+				18165553236EE46100B91E54 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181654D0236EE0AE00B91E54 /* TransactionKeyChainStore.swift in Sources */,
 				181654A4236ED3A800B91E54 /* ViewController.swift in Sources */,
 				181654A0236ED3A800B91E54 /* AppDelegate.swift in Sources */,
 				181654A2236ED3A800B91E54 /* SceneDelegate.swift in Sources */,
@@ -222,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181654D1236EE0AE00B91E54 /* TransactionKeyChainStore.swift in Sources */,
 				181654B7236ED3AC00B91E54 /* IAP_SwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
