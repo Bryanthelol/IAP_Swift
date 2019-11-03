@@ -58,14 +58,14 @@ keychain 的特点就是：
   * 整个支付的入口
   * PaymentManager类会把交易丢给PaymentVerifyManager类
 * PaymentVerifyManager类
-* 验证交易队列管理者
-  * 内部有一个需要验证的交易 task 队列
-  * 它负责管理这些队列的状态，并且驱动这些任务的执行，保证每笔交易验证的先后循序  
-  * 内部还有一个keyChain
-  * 队列中的任务都是从 keyChain 中初始化过来的
-  * 同时它也管理着keyChain 中的数据，对keyChain 进行增删改查等操作，维护keyChain 的状态
-  * PaymentVerifyManager类验证后，会和PaymentManager类通信
-  * 告诉 PaymentManager 某笔交易的状态，让PaymentManager处理掉指定的交易
+  * 验证交易队列管理者
+    * 内部有一个需要验证的交易 task 队列
+    * 它负责管理这些队列的状态，并且驱动这些任务的执行，保证每笔交易验证的先后循序  
+    * 内部还有一个keyChain
+    * 队列中的任务都是从 keyChain 中初始化过来的
+    * 同时它也管理着keyChain 中的数据，对keyChain 进行增删改查等操作，维护keyChain 的状态
+    * PaymentVerifyManager类验证后，会和PaymentManager类通信
+    * 告诉 PaymentManager 某笔交易的状态，让PaymentManager处理掉指定的交易
 * PaymentVerifyTask类
   * 负责和服务器通讯，并且将通讯结果回调出来给 PaymentVerifyManager，驱动下一个验证操作
 * keyChain 提供交易数据的持久化
