@@ -1,6 +1,6 @@
 # in-app-purchase IAP Swift
 
-基于BLIAP库的Swift版本
+IAP库的Swift版本
 
 ## 核心思想
 
