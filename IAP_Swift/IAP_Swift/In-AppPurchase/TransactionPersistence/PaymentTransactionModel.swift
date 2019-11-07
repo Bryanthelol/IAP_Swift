@@ -13,17 +13,17 @@ class PaymentTransactionModel: NSObject, NSCoding {
     /**
     * 商品 id.
     */
-    let productIdentifier: String!
+    private(set) var productIdentifier: String!
     
     /**
     * 事务 id.
     */
-    let transactionIdentifier: String!
+    private(set) var transactionIdentifier: String!
     
     /**
     * 交易时间(添加到交易队列时的时间).
     */
-    let transactionDate: NSDate!
+    private(set) var transactionDate: NSDate!
 
     /**
     * 后台配置的订单号.
